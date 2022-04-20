@@ -52,6 +52,7 @@ const TitleH4 = styled.h4`
   display: flex;
   align-items: center;
   padding: 0 12px;
+  white-space: nowrap;
 `;
 
 export function Title({ children }) {
@@ -74,7 +75,7 @@ const ToggleDiv = styled.div`
       border: 1px solid ${accentColor};
       position: relative;
       transition: 0.35s;
-
+      background-color: #fff;
       &::before {
         position: absolute;
         content: '';
@@ -111,7 +112,6 @@ function Toggle() {
 }
 
 export const HeaderDiv = styled.div`
-  width: 100%;
   height: 32px;
   background-color: #e2e2e2;
   display: flex;
@@ -187,6 +187,36 @@ const InputPortDiv = styled.div`
       text-transform: capitalize;
     }
   }
+  input[type=checkbox]{
+    display: none;
+    & + label{
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+        border: 1px solid ${accentColor};
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 4px;
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transform: rotate(-45deg);
+            top: 1.5px;
+            left: 2px;
+            opacity: 0;
+        }
+    }
+    &:checked{
+        & + label{
+            background-color: ${accentColor};
+            &::before{
+                opacity: 1;
+            }
+        }
+    }
+}
 `;
 
 export function InputPort({ symbol, name, widget }) {
@@ -201,7 +231,7 @@ export function InputPort({ symbol, name, widget }) {
     <InputPortDiv>
       {widget}
       <p>{name}</p>
-      {/*<Checkbox />*/}
+      {<Checkbox />}
     </InputPortDiv>
   );
 }
@@ -247,7 +277,7 @@ export function OutputPort({ symbol, name, widget }) {
 
   return (
     <OutputPortDiv>
-      {/*<Checkbox />*/}
+      {<Checkbox />}
       <p>{name}</p>
       {widget}
     </OutputPortDiv>
@@ -270,11 +300,11 @@ export const VarsOutputDiv = styled(VarsDiv)`
 function InputVars() {
   return (
     <VarsInputDiv>
-      <InputPort symbol="s" name="in-port" />
-      <InputPort symbol="s" name="in-port" />
-      <InputPort symbol="s" name="in-port" />
-      <InputPort symbol="s" name="in-port" />
-      <InputPort symbol="s" name="in-port" />
+      <InputPort symbol="s" name="in-port" widget={<div></div>}/>
+      <InputPort symbol="s" name="in-port" widget={<div></div>}/>
+      <InputPort symbol="s" name="in-port" widget={<div></div>}/>
+      <InputPort symbol="s" name="in-port" widget={<div></div>}/>
+      <InputPort symbol="s" name="in-port" widget={<div></div>}/>
       <InputVarAdd />
     </VarsInputDiv>
   );
@@ -283,15 +313,14 @@ function InputVars() {
 function OutputVars() {
   return (
     <VarsOutputDiv>
-      <OutputPort symbol="s" name="out-port" />
-      <OutputPort symbol="s" name="out-port" />
-      <OutputPort symbol="s" name="out-port" />
+      <OutputPort symbol="s" name="out-port" widget={<div></div>} />
+      <OutputPort symbol="s" name="out-port" widget={<div></div>} />
+      <OutputPort symbol="s" name="out-port" widget={<div></div>} />
     </VarsOutputDiv>
   );
 }
 
 export const CardBodyDiv = styled.div`
-  width: 100%;
   padding: 12px 0;
   display: flex;
   flex-direction: row;
@@ -307,8 +336,7 @@ export function CardBody() {
   );
 }
 
-export const CardFooterDiv = styled.div`
-  width: 100%;
+export const CardFooterDiv = styled.div`  
   height: 32px;
   display: flex;
   justify-content: flex-end;
@@ -353,12 +381,10 @@ export function ErrorPort() {
 }
 
 export const NodeDiv = styled.div`
+  max-width: 500px;
+  min-width: 300px;
   font-family: 'Inter', sans-serif;
   color: ${textColor};
-
-  min-width: 150px;
-  max-width: 600px;
-  width: 200px;
   background-color: #efefef;
   border-radius: 14px;
   border: 1px solid #a7a2bd;
