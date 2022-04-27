@@ -86,10 +86,24 @@ const ProgersMenuHeaderButtonsDiv = styled.div`
         cursor: pointer;
         &:first-of-type{
             color: ${gray};
+            &:hover {
+                color:  ${addOpacity(accentColor, 0.8)}
+            }
+        
+            &:active {
+                color: ${accentClick};
+            }
         }
         &:nth-of-type(2){
             color: ${accentColor};
             margin: 0 12px;
+            &:hover {
+                color:  ${addOpacity(accentColor, 0.8)}
+            }
+        
+            &:active {
+                color: ${accentClick};
+            }
         }
         &:last-of-type{
             width: 78px;
@@ -270,7 +284,7 @@ const ProgersInputsBlockBody = styled.div`
 const ProgersPropsInputDiv = styled.div`
     width: 100%;
     display: grid;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     grid-column-gap: 6px;
     grid-row-gap: 4px;
     grid-template-columns: calc(100% - 34px) 28px;
@@ -281,9 +295,10 @@ const ProgersPropsInputDiv = styled.div`
         margin-bottom: 0;
     }
     label {
-        display: block;
+        /* display: inline-block; */
         width: 100%;
-        margin: 0 0 0 6px;
+        margin: 0 0 -8px 6px;
+        z-index: 1;
         font-size: 12px;
         line-height: 12px;
         font-weight: 600;
@@ -291,6 +306,12 @@ const ProgersPropsInputDiv = styled.div`
         order: -3;
         transition: 0.15s;
         grid-area: label;
+        
+        span{
+            background-color: #EFEFEF;
+            padding: 0 4px 0 2px;
+            border-radius: 5px;
+        }
     }
 
     input {
@@ -338,7 +359,7 @@ export function ProgersInput({ name, id, placeholder }) {
 // Лэйблы инпутов
 
 export function InputLabel({ children }) {
-    return <label htmlFor="">{children}</label>;
+    return <label htmlFor=""> <span> {children} </span> </label>;
 }
 
 // Кнопка удаления
@@ -403,7 +424,8 @@ const customSelect = {
         marginTop: 4,
         backgroundColor: '#ffffff',
         padding: 0,
-        boxShadow: 'none'
+        boxShadow: 'none',
+        zIndex: '10'
     }),
     menuList: () => ({
         padding: 0
@@ -420,6 +442,9 @@ const customSelect = {
         margin: 0,
         color: state.isSelected ? '#fff' : '#26233f',
         backgroundColor: state.isSelected ? '#27ae60' : '#ffffff',
+        "&:hover": {
+            backgroundColor: addOpacity(accentColor, 0.2)
+        }
     })
 }
 

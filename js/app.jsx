@@ -21,10 +21,10 @@ export default function App() {
   return(
     <div className='main'>
       <ProgersMenu/>
-      <ProgersMenuMetas/>
+      {/* <ProgersMenuMetas/>
       <ProgersMenuBlocked/>
       <ProgersMenuBlockedCLOSED/>
-      <ProgersMenuMetasCLOSED/>
+      <ProgersMenuMetasCLOSED/> */}
     </div>
   );
 }
