@@ -4,8 +4,7 @@ import styled from '@emotion/styled';
 import { DeleteSvg } from './svg';
 import ComponentPage from './component-page';
 
-const accentColor = '#27AE60';
-const textColor = '#26233F';
+import {addOpacity, accentColor, accentClick, textColor, light, gray, white, errorColor, warningColor, NodeHeaderBG} from './progers-menu';
 
 const VarPropsDiv = styled.div`
   width: 320px;
@@ -15,27 +14,33 @@ const VarPropsDiv = styled.div`
 `;
 
 const VarPropsDivInner = styled.div`
+  width: 100%;
   display: grid;
   margin-bottom: 8px;
-  grid-column-gap: 11px;
-
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  grid-template-columns: calc(100% - 34px) 28px;
+  grid-template-rows: 12px 28px;
+  grid-template-areas:
+    "label label"
+    "input delete";
   label {
     display: block;
     width: 100%;
-    margin: 0 0 4px 6px;
+    margin: 0 0 0 6px;
     font-size: 12px;
     line-height: 12px;
     font-weight: 600;
-    color: #a7a2bd;
+    color: ${gray};
     order: -3;
     transition: 0.15s;
+    grid-area: label;
   }
 
   input {
-    width: 100%;
     height: 28px;
     border: none;
-    background-color: #fff;
+    background-color: ${white};
     border-radius: 10px;
     padding: 0 10px;
     font-size: 12px;
@@ -43,28 +48,27 @@ const VarPropsDivInner = styled.div`
     font-weight: 400;
     color: #26233f;
     outline: none;
-    border: 1px solid #fff;
+    border: 1px solid ${white};
     transition: 0.15s;
     order: -2;
-    grid-column: 1 / 23;
-
+    grid-area: input;
     &::placeholder {
-      color: rgba(#26233f, 0.4);
+      color: ${addOpacity(textColor, 0.4)};
     }
 
     &:hover {
-      border-color: rgba(#27ae60, 0.5);
+      border-color: ${addOpacity(accentColor, 0.5)};
 
       & + label {
-        color: #27ae60;
+        color: ${accentColor};
       }
     }
 
     &:focus {
-      border-color: #27ae60;
+      border-color: ${accentColor};
 
       & + label {
-        color: #27ae60;
+        color: ${accentColor};
       }
     }
   }
@@ -77,10 +81,11 @@ const VarPropsDeleteStyle = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eb575733;
+  background-color: ${addOpacity(errorColor, 0.2)};
   border-radius: 6px;
   order: -1;
-  grid-column: 23 / 24;
+  grid-area: delete;
+  transform: translateY(1px);
 `;
 
 export function VarPropsInput({ name, id, placeholder }) {
@@ -110,9 +115,9 @@ const ButtonSaveDivStyle = styled.div`
     width: 52px;
     height: 28px;
     border-radius: 8px;
-    background-color: #27ae60;
+    background-color: ${accentColor};
     font-weight: 500;
-    color: #fff;
+    color: ${white};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,11 +125,11 @@ const ButtonSaveDivStyle = styled.div`
     transition: 0.15s;
 
     &:hover {
-      background-color: rgba(#27ae60, 0.8);
+      background-color: ${addOpacity(accentColor, 0.5)};
     }
 
     &:active {
-      background-color: #208b4d;
+      background-color: ${accentClick};
     }
   }
 `;

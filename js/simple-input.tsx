@@ -2,9 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 import { CircleSvg, ErrorSvg, PlayCircleSvg, PlusSvg } from './svg';
-
-const accentColor = '#27AE60';
-const textColor = '#26233F';
+import {addOpacity, accentColor, accentClick, textColor, light, gray, white, errorColor, warningColor, NodeHeaderBG} from './progers-menu';
 
 const TitleH4 = styled.h4`
   font-size: 14px;
@@ -40,7 +38,7 @@ const ToggleDiv = styled.div`
       border: 1px solid ${accentColor};
       position: relative;
       transition: 0.35s;
-      background-color: #fff;
+      background-color: ${white};
       &::before {
         position: absolute;
         content: '';
@@ -60,7 +58,7 @@ const ToggleDiv = styled.div`
 
         &::before {
           left: 10px;
-          background-color: #fff;
+          background-color: ${white};
         }
       }
     }
@@ -113,7 +111,7 @@ const LayoutSimpleInputDiv = styled.div`
   justify-content: space-between;
   height: 32px;
   font-family: 'Inter', sans-serif;
-  background-color: #efefef;
+  background-color: ${light};
   border-radius: 14px;
   min-width: 200px;
   max-width: 300px;

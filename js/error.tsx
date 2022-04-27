@@ -5,11 +5,12 @@ import { CircleSvg, ErrorSvg, PlayCircleSvg, PlusSvg } from './svg';
 
 const accentColor = '#27AE60';
 const textColor = '#26233F';
+const errorColor = '#eb5757';
 
 const ErrorIconDiv = styled.div`
   width: 16px;
   height: 16px;
-  border: 1px solid #eb5757;
+  border: 1px solid ${errorColor};
   border-radius: 14px 0 14px 0;
   display: flex;
   align-items: center;
@@ -39,7 +40,7 @@ const ErrorTextPar = styled.p`
 `;
 
 const ErrorMessageDiv = styled.div`
-  background-color: #eb5757;
+  background-color: ${errorColor};
   max-width: 250px;
   display: flex;
   flex-direction: row;

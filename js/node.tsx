@@ -3,8 +3,7 @@ import styled from '@emotion/styled';
 
 import { CircleSvg, ErrorSvg, PlayCircleSvg, PlusSvg } from './svg';
 
-const accentColor = '#27AE60';
-const textColor = '#26233F';
+import {addOpacity, accentColor, accentClick, textColor, light, gray, white, errorColor, warningColor, NodeHeaderBG} from './progers-menu';
 
 const SignalsDiv = styled.div`
   width: 32px;
@@ -75,7 +74,7 @@ const ToggleDiv = styled.div`
       border: 1px solid ${accentColor};
       position: relative;
       transition: 0.35s;
-      background-color: #fff;
+      background-color: ${white};
       &::before {
         position: absolute;
         content: '';
@@ -95,7 +94,7 @@ const ToggleDiv = styled.div`
 
         &::before {
           left: 10px;
-          background-color: #fff;
+          background-color: ${white};
         }
       }
     }
@@ -113,7 +112,7 @@ function Toggle() {
 
 export const HeaderDiv = styled.div`
   height: 32px;
-  background-color: #e2e2e2;
+  background-color: ${NodeHeaderBG};
   display: flex;
   flex-direction: row;
   border-radius: 14px 14px 0 0;
@@ -183,7 +182,7 @@ const InputPortDiv = styled.div`
       display: block;
       font-size: 10px;
       font-weight: bold;
-      color: #fff;
+      color: ${white};
       text-transform: capitalize;
     }
   }
@@ -200,8 +199,8 @@ const InputPortDiv = styled.div`
         content: '';
         width: 6px;
         height: 4px;
-        border-left: 2px solid #fff;
-        border-bottom: 2px solid #fff;
+        border-left: 2px solid ${white};
+        border-bottom: 2px solid ${white};
         transform: rotate(-45deg);
         top: 1.5px;
         left: 2px;
@@ -222,7 +221,7 @@ const InputPortDiv = styled.div`
 export function InputPort({ symbol, name, widget }) {
   widget = React.cloneElement(widget, {
     children: (
-      <div className="bind" style={{ backgroundColor: '#E2B93B' }}>
+      <div className="bind" style={{ backgroundColor: warningColor }}>
         <span>{symbol}</span>
       </div>
     ),
@@ -252,7 +251,7 @@ const InputAddDiv = styled(InputPortDiv)`
 function InputVarAdd() {
   return (
     <InputAddDiv as="a" href="#">
-      <div className="bind" style={{ backgroundColor: '#E2B93B' }}>
+      <div className="bind" style={{ backgroundColor: warningColor }}>
         <PlusSvg />
       </div>
       <p>add var</p>
@@ -269,7 +268,7 @@ const OutputPortDiv = styled(InputPortDiv)`
 export function OutputPort({ symbol, name, widget }) {
   widget = React.cloneElement(widget, {
     children: (
-      <div className="bind" style={{ backgroundColor: '#E2B93B' }}>
+      <div className="bind" style={{ backgroundColor: warningColor }}>
         <span>{symbol}</span>
       </div>
     ),
@@ -354,7 +353,7 @@ export function CardFooter() {
 const ErrorOutputDiv = styled.div`
   width: 30px;
   height: 30px;
-  border: 1px solid #eb5757;
+  border: 1px solid ${errorColor};
   border-radius: 14px 0 14px 0;
   display: flex;
   align-items: center;
@@ -362,11 +361,11 @@ const ErrorOutputDiv = styled.div`
   transform: translate(1px, 1px);
 
   &.detected {
-    background-color: #eb5757;
+    background-color: ${errorColor};
 
     svg {
       * {
-        fill: #fff;
+        fill: ${white};
       }
     }
   }
@@ -385,9 +384,9 @@ export const NodeDiv = styled.div`
   min-width: 300px;
   font-family: 'Inter', sans-serif;
   color: ${textColor};
-  background-color: #efefef;
+  background-color: ${light};
   border-radius: 14px;
-  border: 1px solid #a7a2bd;
+  border: 1px solid ${gray};
 `;
 
 export default function Node() {
