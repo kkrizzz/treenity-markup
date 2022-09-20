@@ -1,0 +1,165 @@
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
+
+import ProgersMenu from './progers-menu';
+import ProgersMenuAnt from './progers-menu-ant';
+
+import { LogoTreenity, OpenCloseSvg, OpenCloseFlipSvg, HomeSvg, TemplateSvg, UploadSvg, TrashSvg } from './svg';
+import HeaderItemsContainer from './header-items';
+
+import TreeAntNav from './ant/tree';
+
+import { Row, Col, Menu, Layout} from "antd";
+import { UserOutlined } from '@ant-design/icons';
+
+import "../less/variable-treenity.less";
+import "../less/default-treenity.less";
+import "../less/compact-treenity.less";
+
+const SiderContainer = styled.div`
+    width: 260px;
+`;
+
+const LogoContainer = styled.div`
+    width: 100%;
+    padding: 24px 24px 36px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+const ExplorerContainerStyled = styled.div`
+    width: 100%;
+    padding: 0 24px;
+    margin-bottom: 40px;
+    b{
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+        color: #A7A2BD;
+        display: block;
+        margin-bottom: 14px;
+    }
+`;
+
+function ExplorerContainer () {
+    return(
+        <ExplorerContainerStyled>
+            <b>Explorer</b>
+            <TreeAntNav />
+        </ExplorerContainerStyled>
+    );
+}
+
+const MenuContainerStyled = styled.div`
+    width: 100%;
+    padding: 0 24px;
+    b{
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+        color: #A7A2BD;
+        display: block;
+        margin-bottom: 14px;
+    }
+`;
+
+function MenuContainer () {
+    return(
+        <MenuContainerStyled>
+            <b>Menu</b>
+            <Menu
+                // theme="default"
+                mode="inline"
+                defaultSelectedKeys={['1']}
+                items={[
+                    {
+                        key: '1',
+                        icon: <HomeSvg />,
+                        label: 'Home',
+                    },
+                    {
+                        key: '2',
+                        icon: <TemplateSvg />,
+                        label: 'Template',
+                    },
+                    {
+                        key: '3',
+                        icon: <UploadSvg />,
+                        label: 'Upload',
+                    },
+                    {
+                        key: '4',
+                        icon: <TrashSvg />,
+                        label: 'Trash',
+                    }
+                ]}
+            />
+        </MenuContainerStyled>
+    );
+}
+
+export default function SamplePage () {
+  
+    // Layout
+    
+    const [collapsed, setCollapsed] = useState(false);
+    const { Header, Sider, Content } = Layout;
+    
+    return(
+        <Row>
+            <Col span={24}>
+            <Layout>
+                <Sider trigger={null} collapsible collapsed={collapsed}>
+                    <SiderContainer>
+                        <LogoContainer>
+                            <a href="#">
+                                <LogoTreenity/>
+                            </a>
+
+                            
+                            {React.createElement(collapsed ? OpenCloseSvg : OpenCloseFlipSvg, {
+                                className: 'trigger',
+                                onClick: () => setCollapsed(!collapsed),
+                            })}
+                        </LogoContainer>
+
+
+                        <ExplorerContainer />
+                        
+                        <MenuContainer />
+                        
+                    </SiderContainer>
+                </Sider>
+                <Layout className="site-layout">
+                    <Header
+                        className="site-layout-background"
+                        style={{
+                            padding: '0px 40px',
+                            display: 'flex',
+                            justifyContent: 'end'
+                        }}
+                        >
+                        <HeaderItemsContainer />
+                    </Header>
+                    <Content
+                        className="site-layout-background"
+                        style={{
+                            margin: '24px 16px',
+                            padding: 24,
+                            minHeight: 280,
+                            display: 'flex',
+                            justifyContent: 'end'
+                        }}
+                        >
+                        
+                        <ProgersMenu />
+                        <ProgersMenuAnt />
+
+                    </Content>
+                </Layout>
+                </Layout>
+            </Col>
+        </Row>
+    );
+}

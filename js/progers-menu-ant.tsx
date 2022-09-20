@@ -5,6 +5,11 @@ import Select from 'react-select';
 import { DeleteSvg } from './svg';
 import ComponentPage from './component-page';
 
+import TagsButtons from './ant/tagsButtons';
+import ProgsSelect from './ant/select';
+
+import { Row, Col, Menu, Layout, Button, Input} from "antd";
+
 import { OpenCloseSvg, OpenCloseInnerSvg, CloseSvg } from './svg';
 
 export function addOpacity(hex, opacity) {
@@ -28,7 +33,7 @@ const ProgersMenuDiv = styled.div`
     width: 340px;
     font-family: "Inter", sans-serif;
     position: absolute;
-    right: 0;
+    right: 340px;
     top: 64px;
     /* margin: 100px auto; */
 `;
@@ -41,7 +46,7 @@ const ProgersMenuHeaderDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
-    border-bottom: 1px solid #DDE0E2;
+    border-bottom: 1px solid red;
 `;
 
 const ProgersMenuSwitchDiv = styled.div`
@@ -141,9 +146,9 @@ function ProgersMenuHeaderButton ({link, id, className, children}) {
 function ProgersMenuHeaderButtons () {
     return(
         <ProgersMenuHeaderButtonsDiv>
-            <ProgersMenuHeaderButton children="Preview"/>
-            <ProgersMenuHeaderButton children="Save as draft"/>
-            <ProgersMenuHeaderButton children="Publish"/>
+            <Button size="small" type="text">Preview</Button>
+            <Button size="small" type="link">Save as draft</Button>
+            <Button size="default" type="primary" style={{padding: '0 16px'}}>Publish</Button>
         </ProgersMenuHeaderButtonsDiv>
     );
 }
@@ -243,7 +248,8 @@ function Title({ children }) {
 // Добавление тэга
 
 function AddTag (){
-    return <AddTagButton href="#" className="tag">+Tag</AddTagButton>;
+    // return <AddTagButton href="#" className="tag">+Tag</AddTagButton>;
+    return <Button size="small" type="link">+Tag</Button>;
 }
 
 // Сборка ъэдэра пропсов
@@ -287,7 +293,7 @@ const ProgersInputsBlockBody = styled.div`
 const ProgersPropsInputDiv = styled.div`
     width: 100%;
     display: grid;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     grid-column-gap: 6px;
     grid-row-gap: 4px;
     grid-template-columns: calc(100% - 34px) 28px;
@@ -300,7 +306,7 @@ const ProgersPropsInputDiv = styled.div`
     label {
         /* display: inline-block; */
         width: 100%;
-        margin: 0 0 -8px 6px;
+        margin: 0 0 -6px 6px;
         z-index: 1;
         font-size: 12px;
         line-height: 12px;
@@ -316,8 +322,16 @@ const ProgersPropsInputDiv = styled.div`
             border-radius: 5px;
         }
     }
+    button{
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-    input {
+    /* input {
         height: 28px;
         border: none;
         background-color: ${white};
@@ -350,7 +364,7 @@ const ProgersPropsInputDiv = styled.div`
             color: ${accentColor};
             }
         }
-    }
+    } */
 `;
 
 // Инпуты пропсов
@@ -375,82 +389,6 @@ export function PropsDelete() {
     );
 }
 
-// Стилизация селекта пропсов
-
-const customSelect = {
-    control: () => ({
-        height: 28,
-        backgroundColor: white,
-        borderRadius: 10,
-        border: '1px solid #a7a2bd40',
-        padding: '0 5px 0 10px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-    }),
-    valueContainer: () => ({
-        height: 25,
-        display: 'flex',
-        alignItems: 'center'
-    }),
-    indicatorSeparator: () => ({
-        display: 'none'
-    }),
-    indicatorsContainer: () => ({
-        padding: 0,
-        height: 20
-    }),
-    dropdownIndicator: () => ({
-        padding: 0,
-        height: 20,
-        opacity: 0.2
-    }),
-    placeholder: () => ({
-        fontSize: 12,
-        color: '#26233f66'
-    }),
-    singleValue: () => ({
-        fontSize: 12,
-        color: '#26233F'
-    }),
-    input: () => ({
-        height: 28,
-        margin: 0,
-        padding: 0,
-        fontSize: 12,
-        color: '#26233f'
-    }),
-    menu: (provided) => ({
-        ...provided,
-        borderRadius: 10,
-        border: '1px solid #a7a2bd40',
-        marginTop: 4,
-        backgroundColor: '#ffffff',
-        padding: 0,
-        boxShadow: 'none',
-        zIndex: '10'
-    }),
-    menuList: () => ({
-        padding: 0
-    }),
-    option: (provided, state) => ({
-        ...provided,
-        borderRadius: 10,
-        width: '100%',
-        height: '30px',
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 10px',
-        fontSize: 12,
-        margin: 0,
-        color: state.isSelected ? '#fff' : '#26233f',
-        backgroundColor: state.isSelected ? '#27ae60' : '#ffffff',
-        "&:hover": {
-            backgroundColor: addOpacity(accentColor, 0.2)
-        }
-    })
-}
-
 // Параметры селекта
 
 const options = [
@@ -464,21 +402,54 @@ const options = [
 function ProgersPropsInput () {
     return(
         <ProgersPropsInputDiv>
-            <ProgersInput placeholder="Hello my dear friend"/>
             <InputLabel children="Text"/>
-            <PropsDelete/>
+
+            <Input 
+                size="small" 
+                placeholder="Props"
+                // style={{
+                //     borderRadius: '4px'
+                // }}
+            />
+
+            <Button type="primary" danger size="small">
+                <DeleteSvg />
+            </Button>
         </ProgersPropsInputDiv>
     );
 }
 
 // Сборка блока с селектом
 
+const { Option } = Select;
+
+const handleChange = (value) => {
+    console.log(`selected ${value}`);
+};
+
 function ProgersPropsSelect () {
     return(
         <ProgersPropsInputDiv>
             <InputLabel children="menu Type"/>
-            <Select styles={customSelect} options={options}/>
-            <PropsDelete/>
+            
+            {/* <Select
+                defaultValue="lucy"
+                size="small"
+                style={{
+                    width: '100%'
+                }}
+                onChange={handleChange}
+                >
+                <Option value="jack">Jack</Option>
+                <Option value="lucy">Lucy</Option>
+                <Option value="Yiminghe">yiminghe</Option>
+            </Select> */}
+
+            <ProgsSelect />
+
+            <Button type="primary" danger size="small">
+                <DeleteSvg />
+            </Button>
         </ProgersPropsInputDiv>
     );
 }
@@ -487,11 +458,22 @@ const ProgersPropsButtonsLineDiv = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 6px;
-    border-radius: 10px;
+    padding: 3px;
+    border-radius: 4px;
     border: 1px solid ${addOpacity(gray, 0.25)};
     background-color: ${white};
     height: auto;
+    overflow-x: auto;
+    &::-webkit-scrollbar{
+        height: 6px;
+    }
+    &::-webkit-scrollbar-button{
+
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: ${accentColor};
+        border-radius: 2px;
+    }
 `;
 
 const ProgersPropsButtonDiv = styled.div`
@@ -550,14 +532,20 @@ function ProgersPropsAddButtons () {
             
             <ProgersPropsButtonsLineDiv>
                
-                <ProgersPropsButton children="ButtonLagre"/>
+                {/* <ProgersPropsButton children="ButtonLagre"/>
 
                 <ProgersPropsButton children="Bu"/>
 
-                <ProgersPropsButtonAdd />
+                <ProgersPropsButtonAdd /> */}
+
+                <TagsButtons/>
             </ProgersPropsButtonsLineDiv>
 
-            <PropsDelete/>
+            
+
+            <Button type="primary" danger size="small">
+                <DeleteSvg />
+            </Button>
         </ProgersPropsInputDiv>
     );
 }
