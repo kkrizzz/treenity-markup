@@ -1,6 +1,6 @@
 @{html-selector} {
-
     --ant-primary-color: #27ae60;
+    --ant-primary-color-hover: #228d4f;
 
     // --primary-color: #27AE60;
     // --light-color: #F4F4F6;
@@ -11,9 +11,22 @@
     // --warning-color: #E2B93B;
     // --error-color: #EB5757;
 
-    --border-radius-sm: 4px
-    --border-radius-base: 10px;
+    --ant-border-radius-sm: 10px;
+    --ant-border-radius-base: 2px;
+
+    --ant-padding-lg: 24px; // containers
+    --ant-padding-md: 16px; // small containers and buttons
+    --ant-padding-sm: 12px; // Form controls and items
+    --ant-padding-xs: 8px; // small items
+    --ant-padding-xss: 4px; // more small
+
+    --ant-font-size-base: 20px;
+    --ant-font-size-lg: calc(var(--ant-font-size-base) + 2px);
 }
+
+// fixup button sm border radius
+//@btn-padding-horizontal-base: calc(@padding-md - 1px);
+//@btn-padding-horizontal-sm: calc(@padding-xs - 1px);
 
 // @primary-color: var(--primary-color);
 // @light-color: var(--light-color);
@@ -24,7 +37,25 @@
 // @warning-color: var(--warning-color);
 // @error-color: var(--error-color);
 
-@border-radius-sm: var(--border-radius-sm);
-@border-radius-base: var(--border-radius-base);
+//@border-radius-sm: 8px;
+@border-radius-base: var(--ant-border-radius-base);
+@border-radius-sm: var(--ant-border-radius-sm);
+
+// vertical paddings
+//@padding-lg: var(--ant-padding-lg); // containers
+//@padding-md: var(--ant-padding-md); // small containers and buttons
+//@padding-sm: var(--ant-padding-sm); // Form controls and items
+//@padding-xs: var(--ant-padding-xs); // small items
+//@padding-xss: var(--ant-padding-xss); // more small
+
+//@font-size-base: var(--ant-font-size-base);
+//@font-size-lg: var(--ant-font-size-lg);
+//////// FIXUPS
+// fixup tag border-radius
+@tag-border-radius: @border-radius-sm;
+// fixup not supporting css variable
+@arrow-border-radius: 2px;
+// fixup button sm border radius
+@btn-border-radius-sm: @border-radius-sm;
 
 // Not default vars
