@@ -3,18 +3,16 @@ import styled from '@emotion/styled';
 
 import ProgersMenu from './progers-menu';
 import ProgersMenuAnt from './progers-menu-ant';
+import MainMenuLeft from './ant/mainMenu';
 
 import { LogoTreenity, OpenCloseSvg, OpenCloseFlipSvg, HomeSvg, TemplateSvg, UploadSvg, TrashSvg } from './svg';
 import HeaderItemsContainer from './header-items';
 
 import TreeAntNav from './ant/tree';
 
-import { Row, Col, Menu, Layout} from "antd";
-import { UserOutlined } from '@ant-design/icons';
-
-import "../less/variable-treenity.less";
-import "../less/default-treenity.less";
-import "../less/compact-treenity.less";
+import { Row, Col, Layout, ConfigProvider } from "antd";
+import "../less/ant.less";
+//import "../less/compact-treenity.less";
 
 const SiderContainer = styled.div`
     width: 260px;
@@ -42,15 +40,6 @@ const ExplorerContainerStyled = styled.div`
     }
 `;
 
-function ExplorerContainer () {
-    return(
-        <ExplorerContainerStyled>
-            <b>Explorer</b>
-            <TreeAntNav />
-        </ExplorerContainerStyled>
-    );
-}
-
 const MenuContainerStyled = styled.div`
     width: 100%;
     padding: 0 24px;
@@ -64,37 +53,21 @@ const MenuContainerStyled = styled.div`
     }
 `;
 
+function ExplorerContainer () {
+    return(
+        <ExplorerContainerStyled>
+            <b>Explorer</b>
+            <TreeAntNav />
+        </ExplorerContainerStyled>
+    );
+}
+
+
 function MenuContainer () {
     return(
         <MenuContainerStyled>
             <b>Menu</b>
-            <Menu
-                // theme="default"
-                mode="inline"
-                defaultSelectedKeys={['1']}
-                items={[
-                    {
-                        key: '1',
-                        icon: <HomeSvg />,
-                        label: 'Home',
-                    },
-                    {
-                        key: '2',
-                        icon: <TemplateSvg />,
-                        label: 'Template',
-                    },
-                    {
-                        key: '3',
-                        icon: <UploadSvg />,
-                        label: 'Upload',
-                    },
-                    {
-                        key: '4',
-                        icon: <TrashSvg />,
-                        label: 'Trash',
-                    }
-                ]}
-            />
+            <MainMenuLeft />
         </MenuContainerStyled>
     );
 }

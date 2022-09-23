@@ -1,0 +1,54 @@
+// @import './variable-treenity.less';
+@import './ant.less';
+
+.ant-tree-show-line .ant-tree-switcher {
+    background-color: transparent !important;
+}
+
+.ant-tree {
+    // Background txt
+    .ant-tree-node-content-wrapper.ant-tree-node-selected{
+        background-color: transparent !important;
+        border-radius: 0;
+        .ant-tree-iconEle.ant-tree-icon__customize{
+            svg{
+                * {
+                    fill: @primary-color;
+                }
+            }
+        }
+    }
+    .ant-tree-node-content-wrapper{
+        line-height: 23px !important;
+        background-color: transparent !important;
+        &.ant-tree-node-selected{
+            .ant-tree-title{
+                color: @primary-color;
+            }
+        } 
+    }
+
+    // Switcher icon style
+    .ant-tree-switcher{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.ant-tree-switcher-noop{
+            display: none;
+        }
+        &.ant-tree-switcher_open{
+            svg{
+                transform: rotate(90deg);
+                transition: transform .3s;
+                * {
+                    fill: @primary-color;
+                }
+            }
+        }
+    }
+    .ant-tree-iconEle.ant-tree-icon__customize{
+        vertical-align: middle !important;
+        line-height: 27px !important;
+    }
+}
+

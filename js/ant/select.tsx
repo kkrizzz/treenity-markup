@@ -2,12 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { Select } from "antd";
-
-// const SelectContainerStyled = styled.div`
-//     .ant-select-selector{
-//         border-radius: 4px !important;
-//     }
-// `;
+import "../../less/select.less";
 
 export default function SelectInput () {
 

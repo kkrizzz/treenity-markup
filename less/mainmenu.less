@@ -1,0 +1,38 @@
+//@import './variable-treenity.less';
+@import './ant.less';
+
+.ant-menu-item{
+    padding: 0 10px !important;
+    border-radius: @border-radius-base;
+    svg{
+        *{
+            transition: fill .3s;
+        }
+    }
+    &-selected{
+        background-color: @primary-color !important;
+        span{
+            color: @highlight-color;
+        }
+        svg{
+            * {
+                fill: @highlight-color;
+            }
+        }
+        &::after{
+            display: none !important;
+        }
+    }
+    &:not(.ant-menu-item-selected):hover{
+        background-color: var(--accent-color-1) !important;
+        svg{
+            * {
+                fill: @primary-color;
+            }
+        }
+    }
+}
+
+.ant-menu-title-content{
+    margin-left: 8px !important;
+}

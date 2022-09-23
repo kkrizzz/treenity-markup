@@ -5,8 +5,8 @@ import Select from 'react-select';
 
 
 // import "../less/dark-treenity.less";
-import "../less/variable-treenity.less";
-import "../less/default-treenity.less";
+import "../less/ant.less";
+//import "../less/default-treenity.less";
 
 import {version, Row, Col, Divider, Menu, Layout} from "antd";
 

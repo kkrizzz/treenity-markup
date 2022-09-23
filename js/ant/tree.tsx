@@ -1,62 +1,76 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { CarryOutOutlined, FormOutlined } from '@ant-design/icons';
-import { Switch, Tree } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import { MainFolderCloseSvg, FileCloseSvg } from '../svg';
+import { Tree, Icon, Button, Popover } from 'antd';
+
+import {
+    DeleteOutlined,
+    EditOutlined,
+    PlusOutlined,
+    ToolOutlined,
+    AuditOutlined,
+    CopyOutlined,
+    TagsOutlined,
+  } from '@ant-design/icons';
+
+import "../../less/tree.less";
+
+const { TreeNode } = Tree;
 
 const treeData = [
     {
-        title: 'Docs',
+        title: <> 
+                Docs 
+                <Button>Button</Button> 
+               </>,
         key: '0-0',
-        icon: <CarryOutOutlined />,
         children: [
             {
                 title: 'market budget',
                 key: '0-0-0',
-                icon: <CarryOutOutlined />,
                 children: [
                     {
                         title: 'income',
                         key: '0-0-0-0',
-                        icon: <CarryOutOutlined />,
+                        icon: <FileCloseSvg />,
                     },
                     {
                         title: 'expenses',
                         key: '0-0-0-1',
-                        icon: <CarryOutOutlined />,
+                        icon: <FileCloseSvg />,
                     },
                     {
                         title: 'profit',
                         key: '0-0-0-2',
-                        icon: <CarryOutOutlined />,
+                        icon: <FileCloseSvg />,
                     },
                 ],
             },
             {
                 title: 'Tasks',
                 key: '0-0-1',
-                icon: <CarryOutOutlined />,
                 children: [
                     {
                         title: 'personal tasks',
                         key: '0-0-1-0',
-                        icon: <CarryOutOutlined />,
+                        icon: <FileCloseSvg />,
                     },
                 ],
             },
             {
                 title: 'Purchases',
                 key: '0-0-2',
-                icon: <CarryOutOutlined />,
                 children: [
                     {
                         title: 'technics',
                         key: '0-0-2-0',
-                        icon: <CarryOutOutlined />,
+                        icon: <FileCloseSvg />,
                     },
                     {
                         title: 'products',
                         key: '0-0-2-1',
-                        icon: <CarryOutOutlined />
+                        icon: <FileCloseSvg />
                     },
                 ],
             },
@@ -65,22 +79,20 @@ const treeData = [
     {
     title: 'Profiles',
     key: '0-1',
-    icon: <CarryOutOutlined />,
     children: [
         {
         title: 'personal',
         key: '0-1-0',
-        icon: <CarryOutOutlined />,
         children: [
             {
             title: 'Andrew',
             key: '0-1-0-0',
-            icon: <CarryOutOutlined />,
+            icon: <FileCloseSvg />,
             },
             {
             title: 'Dean',
             key: '0-1-0-1',
-            icon: <CarryOutOutlined />,
+            icon: <FileCloseSvg />,
             },
         ],
         },
@@ -92,18 +104,15 @@ export default function TreeAnt () {
     const [showLine, setShowLine] = useState(true);
     const [showIcon, setShowIcon] = useState(false);
     const [showLeafIcon, setShowLeafIcon] = useState(true);
-
-    const onSelect = (selectedKeys, info) => {
-        console.log('selected', selectedKeys, info);
-    };
     
     return (
         <Tree
-            showLine={showLine}
-            showIcon={showIcon}
+            showLine={true}
+            showIcon={true}
             defaultExpandedKeys={['0-0-0']}
-            onSelect={onSelect}
             treeData={treeData}
+            switcherIcon={ <MainFolderCloseSvg /> }
+            // onSelect={onSelect}
         />
     );
 }

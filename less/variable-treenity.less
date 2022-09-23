@@ -128,6 +128,12 @@
 // Base Scaffolding Variables
 // ---
 
+:root{
+  --some-css-var: #000;
+}
+
+@cssVar: var(--some-css-var);
+
 // Background color for `<body>`
 @body-background: #fff;
 // Base background color for most components
@@ -959,7 +965,7 @@
 @tree-bg: transparent; //@component-background
 @tree-title-height: 24px;
 @tree-child-padding: 18px;
-@tree-directory-selected-color: #fff;
+@tree-directory-selected-color: transparent; //#fff
 @tree-directory-selected-bg: transparent; //@primary-color
 @tree-node-hover-bg: transparent; //@item-hover-bg
 @tree-node-selected-bg: transparent; //@primary-2
