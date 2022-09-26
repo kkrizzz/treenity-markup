@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { DownOutlined } from '@ant-design/icons';
-import { MainFolderCloseSvg, FileCloseSvg } from '../svg';
+import { MainFolderCloseSvg, FileCloseSvg, NewFileSvg, SettingsFileSvg } from '../svg';
 import { Tree, Icon, Button, Popover } from 'antd';
 
 import {
@@ -22,7 +22,12 @@ const treeData = [
     {
         title: <> 
                 Docs 
-                <Button size="small">Button</Button> 
+                <Button size="small" className="control-icon control-newfile">
+                    <NewFileSvg />
+                </Button> 
+                <Button size="small" className="control-icon control-settings">
+                    <SettingsFileSvg />
+                </Button> 
                </>,
         key: '0-0',
         children: [

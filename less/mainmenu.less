@@ -1,5 +1,5 @@
-//@import './variable-treenity.less';
 @import './variable.less';
+@import './our-variables.less';
 
 .ant-menu-item{
     padding: 0 10px !important;
@@ -24,10 +24,10 @@
         }
     }
     &:not(.ant-menu-item-selected):hover{
-        background-color: var(--accent-color-1) !important;
+        background-color: var(--ant-primary-color) !important;
         svg{
             * {
-                fill: @primary-color;
+                fill: var(--ant-light-color);
             }
         }
     }

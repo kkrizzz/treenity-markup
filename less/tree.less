@@ -1,4 +1,5 @@
 @import './variable.less';
+@import './our-variables.less';
 
 .ant-tree-show-line .ant-tree-switcher {
     background-color: transparent !important;
@@ -48,6 +49,36 @@
     .ant-tree-iconEle.ant-tree-icon__customize{
         vertical-align: middle !important;
         line-height: 27px !important;
+    }
+    .control{
+        &-icon{
+            display: inline-flex;
+            border: none;
+            padding: 0 3px;
+            height: 17px;
+            svg{
+                * {
+                    transition: 0.35s;
+                }
+            }
+            &:hover{
+                svg{
+                    * {
+                        fill: var(--text-color);
+                    }
+                }
+            }
+        }
+        &-settings{
+
+        }
+        &-newfile{
+            margin-left: 6px;
+        }
+    }
+    .ant-tree-title{
+        display: inline-flex;
+        align-items: center;
     }
 }
 

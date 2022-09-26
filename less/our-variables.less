@@ -16,6 +16,7 @@
     --ant-primary-color: var(--ant-primary-6);
     --ant-primary-color-hover: var(--ant-primary-5);
     --ant-primary-color-active: var(--ant-primary-7);
+    --ant-primary-color-outline: #27ae6033;
 
     // #new-theme{
     //     --ant-white-color: red;
@@ -24,8 +25,16 @@
     // }
 
     --ant-success-color: #17B158;
+    --ant-success-color-hover: #1ac561;
+    --ant-success-color-active: #138f46;
+
     --ant-error-color: #EB5757;
+    --ant-error-color-hover: #ff5f5f;
+    --ant-error-color-active: #c04646;
+
     --ant-warning-color: #E2B93B;
+    --ant-warning-color-hover: #f8ca40;
+    --ant-warning-color-active: #c29e31;
 
     --ant-light-color: #F4F4F6;
     --ant-white-color: #fff;
@@ -65,7 +74,9 @@
 @select-item-selected-color: var(--ant-white-color);
 @select-item-selected-bg: var(--ant-primary-color);
 
-
+.ant-menu-inline{
+    border-right: none !important;
+}
 
 //////// FIXUPS
 // fixup tag border-radius
@@ -83,32 +94,14 @@
 
 // Not default vars
 
-
-
-
-
-
-
 //@btn-padding-horizontal-base: calc(@padding-md - 1px);
 //@btn-padding-horizontal-sm: calc(@padding-xs - 1px);
-
-// @primary-color: var(--primary-color);
-// @light-color: var(--light-color);
-
-// @txt-color: var(--txt-color);
-
-// @success-color: var(--success-color);
-// @warning-color: var(--warning-color);
-// @error-color: var(--error-color);
 
 //@border-radius-sm: 8px;
 
 // vertical paddings
-@padding-lg: 'var(--ant-padding-lg)'; // containers
+@padding-lg: var(--ant-padding-lg); // containers
 @padding-md: 10px; //'var(--ant-padding-md)'; // small containers and buttons
-@padding-sm: 'var(--ant-padding-sm)'; // Form controls and items
+@padding-sm: var(--ant-padding-sm); // Form controls and items
 @padding-xs: var(--ant-padding-xs); // small items
-@padding-xss: 'var(--ant-padding-xss)'; // more small
-
-//@font-size-base: var(--ant-font-size-base);
-//@font-size-lg: var(--ant-font-size-lg);
+@padding-xss: var(--ant-padding-xss); // more small

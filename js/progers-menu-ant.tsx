@@ -200,6 +200,7 @@ const TitleH5 = styled.h5`
     font-size: 12px;
     font-weight: 500;
     color: #26233F;
+    margin-bottom: 0;
 `;
 
 const ProgersInputsBlockHeader_inner = styled.div`
