@@ -296,9 +296,9 @@
 
 @btn-font-size-lg: @font-size-lg;
 @btn-font-size-sm: @font-size-base;
-@btn-padding-horizontal-base: ~'calc(@{padding-md} - 1px)';
+@btn-padding-horizontal-base: calc(@padding-md - 1px);
 @btn-padding-horizontal-lg: @btn-padding-horizontal-base;
-@btn-padding-horizontal-sm: ~'calc(@{padding-xs} - 1px)';
+@btn-padding-horizontal-sm: calc(@padding-xs - 1px);
 
 @btn-height-base: @height-base;
 @btn-height-lg: @height-lg;
@@ -486,10 +486,10 @@
 @input-height-base: @height-base;
 @input-height-lg: @height-lg;
 @input-height-sm: @height-sm;
-@input-padding-horizontal: @control-padding-horizontal - 1px;
-@input-padding-horizontal-base: @input-padding-horizontal;
-@input-padding-horizontal-sm: @control-padding-horizontal-sm - 1px;
-@input-padding-horizontal-lg: @input-padding-horizontal;
+@input-padding-horizontal: ~'calc(@{control-padding-horizontal} - 1px)';
+@input-padding-horizontal-base: ~'@input-padding-horizontal';
+@input-padding-horizontal-sm: calc(@control-padding-horizontal-sm - 1px);
+@input-padding-horizontal-lg: ~'@input-padding-horizontal';
 @input-padding-vertical-base: max(
   (round(((@input-height-base - @font-size-base-orig * @line-height-base) / 2) * 10) / 10) -
     @border-width-base,
