@@ -362,4 +362,147 @@
     "@input-bg: @legacy-primary-1;",
     ""
   ]
+}{
+  "message": "Operation on an invalid type",
+  "type": "Operation",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\style\\themes\\variable.less",
+  "index": 12394,
+  "line": 298,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "@btn-padding-horizontal-lg: @btn-padding-horizontal-base;",
+    "@btn-padding-horizontal-sm: @padding-xs - 1px;",
+    ""
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
 }

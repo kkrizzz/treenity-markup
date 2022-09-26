@@ -133,9 +133,9 @@ export default function SamplePage() {
             >
               <ProgersMenu />
               <ProgersMenuAnt />
-              <div id='new-theme' style={{transform: 'translate(-300px, -112px)'}}>
+              {/* <div id='new-theme' style={{transform: 'translate(-300px, -112px)'}}>
                 <ProgersMenuAnt />
-              </div>
+              </div> */}
             </Content>
           </Layout>
         </Layout>
