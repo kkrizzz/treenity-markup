@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html --dist-dir ./dist/debug",
     "build": "parcel build index.html --dist-dir ./dist/production",
-    "clean": "rm -rf ./dist ./.parcel-cache"
+    "clean": "rm -rf ./dist ./.parcel-cache",
+    "postinstall": "patch-package"
   },
   "author": "",
   "license": "ISC",
