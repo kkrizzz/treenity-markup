@@ -12,7 +12,7 @@ index 1f31893..0563c7d 100644
  
  .antTreeSwitcherIcon(@type: 'tree-default-open-icon') {
 diff --git a/node_modules/antd/lib/button/style/mixin.less b/node_modules/antd/lib/button/style/mixin.less
-index 04037fd..224201d 100644
+index 04037fd..88cb4c0 100644
 --- a/node_modules/antd/lib/button/style/mixin.less
 +++ b/node_modules/antd/lib/button/style/mixin.less
 @@ -1,10 +1,10 @@
@@ -21,10 +21,11 @@ index 04037fd..224201d 100644
  .button-size(@height; @padding-horizontal; @font-size; @border-radius) {
 -  @padding-vertical: max(
 -    (round(((@height - @font-size * @line-height-base) / 2) * 10) / 10) - @border-width-base,
+-    0
+-  );
 +  @padding-vertical: ~'max(
 +    ((((@{height} - @{font-size} * @{line-height-base}) / 2) * 10) / 10) - @{border-width-base},
-     0
--  );
++    0px
 +  )';
    height: @height;
    padding: @padding-vertical @padding-horizontal;
@@ -45,7 +46,7 @@ index 18f7384..59b8f75 100644
          border-top: 2px solid @border-color-split;
          border-radius: 0;
 diff --git a/node_modules/antd/lib/date-picker/style/index-pure.less b/node_modules/antd/lib/date-picker/style/index-pure.less
-index f428f29..282379d 100644
+index f428f29..1c4303c 100644
 --- a/node_modules/antd/lib/date-picker/style/index-pure.less
 +++ b/node_modules/antd/lib/date-picker/style/index-pure.less
 @@ -7,9 +7,9 @@
@@ -56,8 +57,8 @@ index f428f29..282379d 100644
 -  @padding-top: max(((@input-height - @font-height) / 2), 0);
 -  @padding-bottom: max(@input-height - @font-height - @padding-top, 0);
 +  @font-height: ~'calc(@{font-size} * @{line-height-base}) + 2)';
-+  @padding-top: ~'max(calc((@{input-height} - @{font-height}) / 2), 0)';
-+  @padding-bottom: ~'max(calc(@{input-height} - @{font-height} - @{padding-top}), 0)';
++  @padding-top: ~'max(calc((@{input-height} - @{font-height}) / 2), 0px)';
++  @padding-bottom: ~'max(calc(@{input-height} - @{font-height} - @{padding-top}), 0px)';
    padding: @padding-top @padding-horizontal @padding-bottom;
  }
  
