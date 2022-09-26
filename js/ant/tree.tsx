@@ -1,22 +1,116 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { DownOutlined } from '@ant-design/icons';
-import { MainFolderCloseSvg, FileCloseSvg, NewFileSvg, SettingsFileSvg } from '../svg';
+import { MainFolderCloseSvg, FileCloseSvg, NewFileSvg, SettingsFileSvg, TagSettingsSvg, RenameSettingsSvg, DeleteSettingsSvg, CopySettingsSvg } from '../svg';
 import { Tree, Icon, Button, Popover } from 'antd';
-
-import {
-    DeleteOutlined,
-    EditOutlined,
-    PlusOutlined,
-    ToolOutlined,
-    AuditOutlined,
-    CopyOutlined,
-    TagsOutlined,
-  } from '@ant-design/icons';
 
 import "../../less/tree.less";
 
 const { TreeNode } = Tree;
+
+const FilesSettingsStyled = styled.div`
+    width: 120px;
+    padding: 4px;
+    background-color: #E9E8ED;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 10;
+    top: -103px;
+    left: 97px;
+    button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+        width: 100%;
+        border: none;
+        background-color: #E9E8ED;
+        padding: 0 3px;
+        &:hover{
+            * {
+                color: #17B158;
+            }
+            svg {
+                path{
+                    fill: #17B158;
+                }
+            }
+        }
+        &:active{
+            background-color: #178749;
+            p, span{
+                color: #fff;
+            }
+            svg{
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &.Delete{
+            svg{
+                path {
+                    fill: #EB5757;
+                }
+            }
+            p {
+                color: #EB5757;
+            }
+        }
+        svg{
+            width: 16px;
+            height: 16px;
+            margin-right: 3px;
+            path {
+                transition: .35s;
+            }
+        }
+        p{
+            margin-bottom: 0;
+            font-size: 12px;
+            line-height: 12px;
+            display: flex;
+            align-items: center;
+            transition: .35s;
+        }
+        span{
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: bold;
+            color: #A7A2BD;
+            transition: .35s;
+        }
+    }
+`;
+
+function FilesSettings () {
+    return(
+        <FilesSettingsStyled>
+            <Button size="small">
+                <p><TagSettingsSvg />Add tag</p>
+                <span>Ctrl+T</span>
+            </Button>
+
+            <Button size="small">
+                <p><CopySettingsSvg />Copy</p>
+                <span>Ctrl+C</span>
+            </Button>
+
+            <Button size="small">
+                <p><RenameSettingsSvg />Rename</p>
+                <span>Ctrl+R</span>
+            </Button>
+
+            <Button size="small" className='Delete'>
+                <p><DeleteSettingsSvg />Delete</p>
+                <span>Del</span>
+            </Button>
+        </FilesSettingsStyled>
+    );    
+}
 
 const treeData = [
     {
@@ -28,7 +122,9 @@ const treeData = [
                 <Button size="small" className="control-icon control-settings">
                     <SettingsFileSvg />
                 </Button> 
-               </>,
+
+                <FilesSettings />
+            </>,
         key: '0-0',
         children: [
             {
