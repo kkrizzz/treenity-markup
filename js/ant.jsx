@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import Select from 'react-select';
 
-
-
 // import "../less/dark-treenity.less";
-import "../less/ant.less";
+import '../less/ant.less';
 //import "../less/default-treenity.less";
 
-import {version, Row, Col, Divider, Menu, Layout} from "antd";
+import { version, Row, Col, Divider, Menu, Layout } from 'antd';
 
 import { Breadcrumbs } from './ant/breadcrumbs';
 import { Buttons } from './ant/buttons';
@@ -17,13 +15,13 @@ import { Pags } from './ant/paginations';
 import { StepsDefault } from './ant/steps';
 import { StepsFull } from './ant/stepsFull';
 import { AutoCompleteInput } from './ant/inputs';
-import { SelectInput } from './ant/select';
+import SelectInput from './ant/select';
 import { SelectTags } from './ant/tags';
 import { CheckboxesInput } from './ant/checkbox';
 import { NavMenu } from './ant/navs';
 
 export default function UIsample () {
-  
+
 // Layout
 
 const [collapsed, setCollapsed] = useState(false);
@@ -32,7 +30,7 @@ const { Header, Sider, Content } = Layout;
     return(
         <div className="App">
             <h1>antd version: {version}</h1>
-            
+
             <Divider />
 
             <Row>
@@ -58,7 +56,7 @@ const { Header, Sider, Content } = Layout;
                 </Col>
                 <Col span={9} align="center">
                     <StepsFull/>
-                </Col> 
+                </Col>
             </Row>
 
             <Divider />
@@ -77,7 +75,7 @@ const { Header, Sider, Content } = Layout;
 
                 </Col>
                 <Col span={4}>
-                    
+
                 </Col>
                 <Col span={4}>
                     <CheckboxesInput />
