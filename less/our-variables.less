@@ -1,18 +1,37 @@
+
+
 @{html-selector} {
     --ant-primary-color: #27ae60;
-    --ant-primary-color-hover: #228d4f;
+    --ant-primary-color-hover: #52BE80;
+    --ant-primary-color-active: #208B4D;
 
-    // --primary-color: #27AE60;
-    // --light-color: #F4F4F6;
-    // --gray-color: #A7A2BD;
-    // --txt-color: #26233F;
+    // --ant-primary-1:
+    // --ant-primary-2:
+    // --ant-primary-3:
+    // --ant-primary-4:
+    // --ant-primary-5:
+    // --ant-primary-6:
+    // --ant-primary-7: 
 
-    // --success-color: #17B158;
-    // --warning-color: #E2B93B;
-    // --error-color: #EB5757;
+    #new-theme{
+        --ant-white-color: red;
+        --ant-border-radius-sm: 20px;
+    --ant-border-radius-base: 30px;
+    }
 
-    --ant-border-radius-sm: 10px;
-    --ant-border-radius-base: 2px;
+    --ant-success-color: #17B158;
+    --ant-error-color: #EB5757;
+    --ant-warning-color: #E2B93B;
+
+    --ant-light-color: #F4F4F6;
+    --ant-white-color: #fff;
+    --ant-grey-color: #A7A2BD;
+
+    --text-color: #26233F;
+    --text-color-secondary: #A7A2BD;
+
+    --ant-border-radius-sm: 4px;
+    --ant-border-radius-base: 10px;
 
     --ant-padding-lg: 24px; // containers
     --ant-padding-md: 16px; // small containers and buttons
@@ -22,9 +41,50 @@
 
     --ant-font-size-base: 20px;
     --ant-font-size-lg: calc(var(--ant-font-size-base) + 2px);
+
+    --font-family: 'Inter', sans-serif;
 }
 
+@font-family: var(--font-family);
+
+@layout-body-background: var(--ant-white-color);
+@layout-header-background: var(--ant-light-color);
+
+@menu-highlight-color: var(--ant-white-color);
+
+@component-background: var(--ant-light-color);
+@highlight-color: var(--ant-light-color);
+
+@input-bg: var(--ant-white-color);
+
+@select-background: var(--ant-white-color);
+@select-item-selected-color: var(--ant-white-color);
+@select-item-selected-bg: var(--ant-primary-color);
+
+
+
+//////// FIXUPS
+// fixup tag border-radius
+@tag-border-radius: @border-radius-sm;
+// fixup not supporting css variable
+@arrow-border-radius: 2px;
 // fixup button sm border radius
+@btn-border-radius-sm: @border-radius-sm;
+// fixup button sm border radius
+@border-radius-base: var(--ant-border-radius-base);
+@border-radius-sm: var(--ant-border-radius-sm);
+// fixup text color
+@text-color: var(--text-color);
+// @text-color-secondary: var(--text-color-secondary);
+
+// Not default vars
+
+
+
+
+
+
+
 //@btn-padding-horizontal-base: calc(@padding-md - 1px);
 //@btn-padding-horizontal-sm: calc(@padding-xs - 1px);
 
@@ -38,8 +98,6 @@
 // @error-color: var(--error-color);
 
 //@border-radius-sm: 8px;
-@border-radius-base: var(--ant-border-radius-base);
-@border-radius-sm: var(--ant-border-radius-sm);
 
 // vertical paddings
 //@padding-lg: var(--ant-padding-lg); // containers
@@ -50,12 +108,3 @@
 
 //@font-size-base: var(--ant-font-size-base);
 //@font-size-lg: var(--ant-font-size-lg);
-//////// FIXUPS
-// fixup tag border-radius
-@tag-border-radius: @border-radius-sm;
-// fixup not supporting css variable
-@arrow-border-radius: 2px;
-// fixup button sm border radius
-@btn-border-radius-sm: @border-radius-sm;
-
-// Not default vars

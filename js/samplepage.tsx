@@ -18,7 +18,7 @@ import HeaderItemsContainer from './header-items';
 
 import TreeAntNav from './ant/tree';
 
-import { Row, Col, Layout, ConfigProvider, Typography } from 'antd';
+import { Row, Col, Layout } from 'antd';
 import '../less/ant.less';
 //import "../less/compact-treenity.less";
 
@@ -87,7 +87,6 @@ export default function SamplePage() {
 
   return (
     <Row>
-      <Typography.Title level={2}>Testing CSS Variable</Typography.Title>
       <Col span={24}>
         <Layout>
           <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -134,6 +133,9 @@ export default function SamplePage() {
             >
               <ProgersMenu />
               <ProgersMenuAnt />
+              <div id='new-theme' style={{transform: 'translate(-300px, -112px)'}}>
+                <ProgersMenuAnt />
+              </div>
             </Content>
           </Layout>
         </Layout>

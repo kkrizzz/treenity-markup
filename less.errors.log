@@ -1,0 +1,365 @@
+{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `fade`: Argument cannot be evaluated to a color",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\date-picker\\style\\status.less",
+  "index": 674,
+  "line": 32,
+  "column": 4,
+  "callLine": null,
+  "extract": [
+    "  &-status-error {",
+    "    .picker-status-color(@error-color, @error-color, @input-bg, @error-color-hover, @error-color-outline);",
+    "  }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Error evaluating function `shade`: Argument cannot be evaluated to a color",
+  "type": "Runtime",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\node_modules\\antd\\lib\\notification\\style\\index-pure.less",
+  "index": 3118,
+  "line": 134,
+  "column": 17,
+  "callLine": null,
+  "extract": [
+    "        & when not (@theme = dark) {",
+    "          color: shade(@text-color-secondary, 40%);",
+    "        }"
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/select.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 0,
+  "line": 1,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    null,
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    ""
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/tree.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 0,
+  "line": 1,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    null,
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    ""
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/ant.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 0,
+  "line": 1,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    null,
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    ""
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/mainmenu.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 0,
+  "line": 1,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    null,
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    ""
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/tree.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\ant.less",
+  "index": 48,
+  "line": 3,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "",
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    "@root-entry-name: default;"
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/select.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\ant.less",
+  "index": 48,
+  "line": 3,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "",
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    "@root-entry-name: default;"
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/ant.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\ant.less",
+  "index": 48,
+  "line": 3,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "",
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    "@root-entry-name: default;"
+  ]
+}{
+  "message": "Failed to resolve 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' from './less/mainmenu.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\ant.less",
+  "index": 48,
+  "line": 3,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "",
+    "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');",
+    "@root-entry-name: default;"
+  ]
+}{
+  "message": "Failed to resolve '../color/colors' from './less/tree.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\default.less",
+  "index": 94,
+  "line": 2,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */",
+    "@import '../color/colors';",
+    ""
+  ]
+}{
+  "message": "Failed to resolve '../color/colors' from './less/select.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\default.less",
+  "index": 94,
+  "line": 2,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */",
+    "@import '../color/colors';",
+    ""
+  ]
+}{
+  "message": "Failed to resolve '../color/colors' from './less/ant.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\default.less",
+  "index": 94,
+  "line": 2,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */",
+    "@import '../color/colors';",
+    ""
+  ]
+}{
+  "message": "Failed to resolve '../color/colors' from './less/mainmenu.less'",
+  "type": "Syntax",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\default.less",
+  "index": 94,
+  "line": 2,
+  "column": 0,
+  "callLine": null,
+  "extract": [
+    "/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */",
+    "@import '../color/colors';",
+    ""
+  ]
+}{
+  "message": "variable @legacy-primary-1 is undefined",
+  "type": "Name",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 1301,
+  "line": 52,
+  "column": 11,
+  "callLine": null,
+  "extract": [
+    "",
+    "@input-bg: @legacy-primary-1;",
+    ""
+  ]
+}{
+  "message": "variable @legacy-primary-1 is undefined",
+  "type": "Name",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 1301,
+  "line": 52,
+  "column": 11,
+  "callLine": null,
+  "extract": [
+    "",
+    "@input-bg: @legacy-primary-1;",
+    ""
+  ]
+}{
+  "message": "variable @legacy-primary-1 is undefined",
+  "type": "Name",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 1301,
+  "line": 52,
+  "column": 11,
+  "callLine": null,
+  "extract": [
+    "",
+    "@input-bg: @legacy-primary-1;",
+    ""
+  ]
+}{
+  "message": "variable @legacy-primary-1 is undefined",
+  "type": "Name",
+  "filename": "C:\\MYLITTLE_JOB\\treenity_markup\\less\\our-variables.less",
+  "index": 1301,
+  "line": 52,
+  "column": 11,
+  "callLine": null,
+  "extract": [
+    "",
+    "@input-bg: @legacy-primary-1;",
+    ""
+  ]
+}

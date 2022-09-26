@@ -22,7 +22,7 @@ const treeData = [
     {
         title: <> 
                 Docs 
-                <Button>Button</Button> 
+                <Button size="small">Button</Button> 
                </>,
         key: '0-0',
         children: [

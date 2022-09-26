@@ -19,7 +19,7 @@ export function addOpacity(hex, opacity) {
 export const accentColor = '#27AE60';
 export const accentClick = '#208b4d';
 export const textColor = '#26233F';
-export const light = '#EFEFEF';
+export const light = '#F4F4F6';
 export const gray = '#A7A2BD';
 
 export const white = '#fff';
@@ -306,7 +306,7 @@ const ProgersPropsInputDiv = styled.div`
     label {
         /* display: inline-block; */
         width: 100%;
-        margin: 0 0 -6px 6px;
+        margin-bottom: -2px;
         z-index: 1;
         font-size: 12px;
         line-height: 12px;
@@ -317,15 +317,15 @@ const ProgersPropsInputDiv = styled.div`
         grid-area: label;
         
         span{
-            background-color: #EFEFEF;
+            /* background-color: #EFEFEF; */
             padding: 0 4px 0 2px;
-            border-radius: 5px;
+            /* border-radius: 5px; */
         }
     }
     button{
         padding: 0;
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -14,7 +14,7 @@ export function addOpacity(hex, opacity) {
 export const accentColor = '#27AE60';
 export const accentClick = '#208b4d';
 export const textColor = '#26233F';
-export const light = '#EFEFEF';
+export const light = '#F4F4F6';
 export const gray = '#A7A2BD';
 
 export const white = '#fff';
