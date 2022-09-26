@@ -521,6 +521,23 @@ index 1f31893..ffea7e5 100644
            border-right: 1px solid @border-color-base;
            content: '';
          }
+diff --git a/node_modules/antd/lib/typography/style/index-pure.less b/node_modules/antd/lib/typography/style/index-pure.less
+index 4469781..b593e54 100644
+--- a/node_modules/antd/lib/typography/style/index-pure.less
++++ b/node_modules/antd/lib/typography/style/index-pure.less
+@@ -201,9 +201,9 @@
+     position: relative;
+ 
+     div& {
+-      left: -@input-padding-horizontal - 1px;
+-      margin-top: -@input-padding-vertical-base - 1px;
+-      margin-bottom: calc(1em - @input-padding-vertical-base - 1px);
++      left: ~'calc(-@{input-padding-horizontal} - 1px)';
++      margin-top: ~'calc(-@{input-padding-vertical-base} - 1px)';
++      margin-bottom: ~'calc(1em - @input-padding-vertical-base - 1px)';
+     }
+ 
+     &-confirm {
 diff --git a/node_modules/antd/lib/typography/style/rtl.less b/node_modules/antd/lib/typography/style/rtl.less
 index f2866ad..41a33a6 100644
 --- a/node_modules/antd/lib/typography/style/rtl.less

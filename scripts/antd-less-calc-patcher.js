@@ -8,7 +8,7 @@ try {
     files = files.filter((f) => f.endsWith('.less'));
     files.forEach((fileName) => {
       const fileContent = fs.readFileSync(fileName).toString();
-      const '(-?\(?(@[\w\d\-]+|\d+(\w+|%)))';
+      const word = '(-?(?(@[wd-]+|d+(w+|%)))';
       new RegExp(`${SYMBOL}`);
       const patchedContent = fileContent.replace(
         /((-?\(?(@[\w\d\-]+|\d+(\w+|%)))(\s+[\+\-\*\/]\s+))+(@[\w\d\-]+|\d+(\w+|%)\)?)/gim,
