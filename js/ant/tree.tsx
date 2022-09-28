@@ -207,13 +207,17 @@ export default function TreeAnt () {
     const [showLeafIcon, setShowLeafIcon] = useState(true);
     
     return (
-        <Tree
-            showLine={true}
-            showIcon={true}
-            defaultExpandedKeys={['0-0-0']}
-            treeData={treeData}
-            switcherIcon={ <MainFolderCloseSvg /> }
-            // onSelect={onSelect}
-        />
+        <>
+            <Tree
+                showLine={true}
+                showIcon={true}
+                defaultExpandedKeys={['0-0-0']}
+                treeData={treeData}
+                switcherIcon={ <MainFolderCloseSvg /> }
+            />
+            <Button type="primary" size="small" style={{ marginTop: '6px' }}> 
+                Add folder
+            </Button>
+        </>
     );
 }

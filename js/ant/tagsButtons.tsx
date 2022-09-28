@@ -1,6 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react';
+import styled from '@emotion/styled';
 import { PlusOutlined } from '@ant-design/icons';
 import { Input, Tag, Tooltip } from 'antd';
+import { addOpacity } from '../progers-menu-ant';
+import '../../less/ant.less';
+
+const ProgersPropsButtonsLineDiv = styled.div`
+    width: 276px;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    border-radius: 4px;
+    background-color: var(--ant-white-color);
+    border: 1px solid #d9d9d9;
+    height: auto;
+    overflow-x: auto;
+    &::-webkit-scrollbar{
+        height: 6px;
+    }
+    &::-webkit-scrollbar-button{
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: var(--ant-primary-color);
+        border-radius: 2px;
+    }
+`;
 
 export default function TagsButtons () {
 
@@ -56,7 +81,7 @@ export default function TagsButtons () {
     };
 
     return(
-        <>
+        <ProgersPropsButtonsLineDiv>
             {tags.map((tag, index) => {
                 if (editInputIndex === index) {
                 return (
@@ -120,6 +145,6 @@ export default function TagsButtons () {
                     <PlusOutlined /> Button
                 </Tag>
             )}
-        </>
+        </ProgersPropsButtonsLineDiv>
     );
 }

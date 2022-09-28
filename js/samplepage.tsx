@@ -20,7 +20,6 @@ import TreeAntNav from './ant/tree';
 
 import { Row, Col, Layout } from 'antd';
 import '../less/ant.less';
-//import "../less/compact-treenity.less";
 
 const SiderContainer = styled.div`
   width: 260px;
