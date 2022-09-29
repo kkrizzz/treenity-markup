@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import {
+  Row,
+  Col,
+  Menu,
+  Layout,
+  Button,
+  Input,
+  Space,
+  Typography,
+  Tabs,
+  Form,
+} from 'antd';
 import Select from 'react-select';
 
 import { DeleteSvg } from './svg';
@@ -7,8 +19,6 @@ import ComponentPage from './component-page';
 
 import TagsButtons from './ant/tagsButtons';
 import ProgsSelect from './ant/select';
-
-import { Row, Col, Menu, Layout, Button, Input, Space, Typography } from 'antd';
 
 import {
   OpenCloseSvg,
@@ -70,6 +80,7 @@ const MenuSwitchButton = styled.a`
   height: 100%;
   line-height: 26px;
   padding: 0 12px;
+
   &::before {
     position: absolute;
     content: '';
@@ -81,6 +92,7 @@ const MenuSwitchButton = styled.a`
     right: 0;
     opacity: 0;
   }
+
   &.active {
     &::before {
       opacity: 1;
@@ -103,12 +115,16 @@ const MenuOpenClose = ({ onCollapse2 }) => (
 
 // Сборка хэдэра
 
+const ColCenter = styled(Col)`
+  display: flex;
+`;
+
 export function ProgersMenuHeader() {
   return (
     <Row style={{ padding: '10px 20px' }}>
-      <Col flex={1} justify="center" style={{ padding: '4px 0' }}>
+      <ColCenter flex={1}>
         <MenuOpenClose />
-      </Col>
+      </ColCenter>
       <Col flex={4}>
         <Row justify="end" align="middle" gutter={[4, 4]}>
           <Col>
@@ -291,12 +307,7 @@ function ProgersPropsInput() {
 
 function ProgersPropsSelect() {
   return (
-    <PropsContainer>
-      <Row>
-        <Col flex={24}>
-          <InputLabel children="menu Type" />
-        </Col>
-      </Row>
+    <Form.Item label="Menu type">
       <Row gutter={[8, 8]}>
         <Col flex="auto">
           <ProgsSelect />
@@ -305,7 +316,7 @@ function ProgersPropsSelect() {
           <PropsDeleteButton />
         </Col>
       </Row>
-    </PropsContainer>
+    </Form.Item>
   );
 }
 
@@ -340,9 +351,11 @@ export function ProgersInputsItem() {
 
       {!collapse && (
         <ProgersInputsBlockBody>
-          <ProgersPropsInput />
-          <ProgersPropsSelect />
-          <ProgersPropsAddButtons />
+          <Form layout="vertical">
+            <ProgersPropsInput />
+            <ProgersPropsSelect />
+            <ProgersPropsAddButtons />
+          </Form>
         </ProgersInputsBlockBody>
       )}
     </ProgersInputsBlockDiv>
@@ -354,28 +367,38 @@ export function ProgersInputsItem() {
 export default function ProgersMenu() {
   const [tab, setTab] = useState('metas');
 
-  return (
-    <ProgersMenuDiv>
-      <ProgersMenuHeader />
-
-      <MenuTabs
-        tabs={[
-          ['metas', 'Metas'],
-          ['props', 'Properties'],
-        ]}
-        value={tab}
-        onChange={setTab}
-      />
-
-      {tab === 'metas' ? (
+  const tabItemss = [
+    {
+      label: 'Metas',
+      key: 'metas',
+      children: (
         <>
           <ProgersInputsItem />
           <ProgersInputsItem />
           <ProgersInputsItem />
         </>
-      ) : tab === 'props' ? (
-        <ProgersMetas />
-      ) : null}
+      ),
+    }, // remember to pass the key prop
+    {
+      label: 'Properties',
+      key: 'props',
+      children: <ProgersMetas />,
+    },
+  ];
+
+  return (
+    <ProgersMenuDiv>
+      <ProgersMenuHeader />
+
+      <Tabs items={tabItemss} />
+      {/*<MenuTabs*/}
+      {/*  tabs={[*/}
+      {/*    ['metas', 'Metas'],*/}
+      {/*    ['props', 'Properties'],*/}
+      {/*  ]}*/}
+      {/*  value={tab}*/}
+      {/*  onChange={setTab}*/}
+      {/*/>*/}
     </ProgersMenuDiv>
   );
 }
@@ -389,6 +412,7 @@ const ProgersMetasStyled = styled.div`
 const ProgersMetasItemsStyled = styled.div`
   width: 100%;
   padding-top: 6px;
+
   button {
     width: 100%;
     display: flex;
@@ -397,20 +421,24 @@ const ProgersMetasItemsStyled = styled.div`
     padding: 0 10px;
     transition: 0.35s;
     margin-bottom: 6px;
+
     &:hover {
       background-color: var(--ant-primary-color);
       color: var(--ant-light-color);
+
       svg {
         * {
           fill: var(--ant-light-color);
         }
       }
     }
+
     span {
       margin-left: 12px;
       font-size: 12px;
       font-weight: 500;
     }
+
     svg {
       &:last-child {
         width: 20px;
@@ -418,6 +446,7 @@ const ProgersMetasItemsStyled = styled.div`
         transform: rotate(90deg);
         margin-left: auto;
       }
+
       path {
         transition: 0.35s;
       }
