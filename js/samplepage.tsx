@@ -13,12 +13,13 @@ import {
   TemplateSvg,
   UploadSvg,
   TrashSvg,
+  SearchSvg
 } from './svg';
 import HeaderItemsContainer from './header-items';
 
 import TreeAntNav from './ant/tree';
 
-import { Row, Col, Layout } from 'antd';
+import { Row, Col, Layout, Input } from 'antd';
 import '../less/ant.less';
 
 const SiderContainer = styled.div`
@@ -78,6 +79,18 @@ function MenuContainer() {
   );
 }
 
+const HeaderSearchStyled = styled.div`
+  width: 270px;
+`;
+
+function HeaderSearch () {
+  return (
+    <HeaderSearchStyled>
+      <Input size="large" placeholder="Search" prefix={ <SearchSvg/> }/>
+    </HeaderSearchStyled>
+  );
+}
+
 export default function SamplePage() {
   // Layout
 
@@ -111,13 +124,14 @@ export default function SamplePage() {
           </Sider>
           <Layout className="site-layout">
             <Header
-              className="site-layout-background"
-              style={{
-                padding: '0px 40px',
-                display: 'flex',
-                justifyContent: 'end',
-              }}
-            >
+                className="site-layout-background"
+                style={{
+                  padding: '0px 40px',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                }}
+              >
+              <HeaderSearch />
               <HeaderItemsContainer />
             </Header>
             <Content
