@@ -86,7 +86,7 @@ const HeaderSearchStyled = styled.div`
 function HeaderSearch () {
   return (
     <HeaderSearchStyled>
-      <Input size="large" placeholder="Search" prefix={ <SearchSvg/> }/>
+      <Input placeholder="Search" prefix={ <SearchSvg/> }/>
     </HeaderSearchStyled>
   );
 }

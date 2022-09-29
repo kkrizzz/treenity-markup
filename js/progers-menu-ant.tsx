@@ -90,7 +90,7 @@ const MenuSwitchButton = styled.a`
 
 // Кнопка открытия и закрытия меню
 
-export const MenuOpenClose = ({ onCollapse2 }) => (
+const MenuOpenClose = ({ onCollapse2 }) => (
   <a
     href="#"
     className="open-close"
