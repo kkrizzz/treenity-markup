@@ -145,7 +145,7 @@ const treeData = [
         <Button size="small" className="control-icon control-settings">
           <SettingsFileSvg />
         </Button>
-        <FilesSettings />
+        {/* <FilesSettings /> */}
       </>
     ),
     key: '0-0',

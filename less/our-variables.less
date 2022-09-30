@@ -1,101 +1,101 @@
-
-
 @{html-selector} {
+  --ant-primary-1: #dfede2;
+  --ant-primary-2: #c1e0ca;
+  --ant-primary-3: #94d4a8;
+  --ant-primary-4: #6bc78b;
+  --ant-primary-5: #47ba73;
+  --ant-primary-6: #27ae60;
+  --ant-primary-7: #178749;
+  --ant-primary-8: #0c6135;
+  --ant-primary-9: #043b20;
+  --ant-primary-10: #01140c;
 
-    --ant-primary-1: #dfede2;
-    --ant-primary-2: #c1e0ca;
-    --ant-primary-3: #94d4a8;
-    --ant-primary-4: #6bc78b;
-    --ant-primary-5: #47ba73;
-    --ant-primary-6: #27ae60;
-    --ant-primary-7: #178749;
-    --ant-primary-8: #0c6135;
-    --ant-primary-9: #043b20;
-    --ant-primary-10: #01140c;
+  --ant-primary-color: var(--ant-primary-6);
+  --ant-primary-color-hover: var(--ant-primary-5);
+  --ant-primary-color-active: var(--ant-primary-7);
+  --ant-primary-color-outline: #27ae6033;
 
-    --ant-primary-color: var(--ant-primary-6);
-    --ant-primary-color-hover: var(--ant-primary-5);
-    --ant-primary-color-active: var(--ant-primary-7);
-    --ant-primary-color-outline: #27ae6033;
+  // #new-theme{
+  //     --ant-white-color: red;
+  //     --ant-border-radius-sm: 20px;
+  //     --ant-border-radius-base: 30px;
+  // }
 
-    // #new-theme{
-    //     --ant-white-color: red;
-    //     --ant-border-radius-sm: 20px;
-    //     --ant-border-radius-base: 30px;
-    // }
+  --ant-success-color: #17b158;
+  --ant-success-color-hover: #1ac561;
+  --ant-success-color-active: #138f46;
 
-    --ant-success-color: #17B158;
-    --ant-success-color-hover: #1ac561;
-    --ant-success-color-active: #138f46;
+  --ant-error-color: #eb5757;
+  --ant-error-color-hover: #ff5f5f;
+  --ant-error-color-active: #c04646;
 
-    --ant-error-color: #EB5757;
-    --ant-error-color-hover: #ff5f5f;
-    --ant-error-color-active: #c04646;
+  --ant-warning-color: #e2b93b;
+  --ant-warning-color-hover: #f8ca40;
+  --ant-warning-color-active: #c29e31;
 
-    --ant-warning-color: #E2B93B;
-    --ant-warning-color-hover: #f8ca40;
-    --ant-warning-color-active: #c29e31;
+  --ant-white-color: #fff;
+  --ant-light-color: #f4f4f6;
+  --ant-gray-color: #a7a2bd;
 
-    --ant-light-color: #F4F4F6;
-    --ant-white-color: #fff;
-    --ant-grey-color: #A7A2BD;
+  --text-color: #26233f;
+  --text-color-secondary: #a7a2bd;
 
-    --text-color: #26233F;
-    --text-color-secondary: #A7A2BD;
+  --ant-border-radius-sm: 4px;
+  --ant-border-radius-base: 10px;
 
-    --ant-border-radius-sm: 4px;
-    --ant-border-radius-base: 10px;
+  --ant-padding-lg: 24px; // containers
+  --ant-padding-md: 16px; // small containers and buttons
+  --ant-padding-sm: 12px; // Form controls and items
+  --ant-padding-xs: 8px; // small items
+  --ant-padding-xss: 4px; // more small
 
-    --ant-padding-lg: 24px; // containers
-    --ant-padding-md: 16px; // small containers and buttons
-    --ant-padding-sm: 12px; // Form controls and items
-    --ant-padding-xs: 8px; // small items
-    --ant-padding-xss: 4px; // more small
+  --ant-font-size-base: 20px;
+  --ant-font-size-lg: calc(var(--ant-font-size-base) + 2px);
 
-    --ant-font-size-base: 20px;
-    --ant-font-size-lg: calc(var(--ant-font-size-base) + 2px);
+  --font-family: 'Inter', sans-serif;
 
-    --font-family: 'Inter', sans-serif;
+  // form
+  // form label
+  --form-label-paddings: 0px 0px 0px 4px;
+  --form-label-margin-bottom: -7px;
 
-    // form
-    // form label
-    --form-label-margin-bottom: -16px;
+  --form-item-margin-bottom: 0px;
 }
 
-.user-menu {
-    --form-label-margin-bottom: -16px;
+.ant-menu-inline {
+  border-right: none !important;
 }
 
+//////// FIXUPS
+// fixup font-family
 @font-family: var(--font-family);
-
+// fixup layout bg color
 @layout-body-background: var(--ant-white-color);
 @layout-header-background: var(--ant-light-color);
-
+// fixup highlight color
 @menu-highlight-color: var(--ant-white-color);
-
 @component-background: var(--ant-light-color);
 @highlight-color: var(--ant-light-color);
-
+// fixup input bg color
 @input-bg: var(--ant-white-color);
-
+// fixup select styles
 @select-background: var(--ant-white-color);
 @select-item-selected-color: var(--ant-white-color);
 @select-item-selected-bg: var(--ant-primary-color);
-
+@select-item-active-bg: var(--ant-primary-2);
+// fixup button styles
 @btn-padding-horizontal-sm: var(--ant-padding-xss);
-
 @btn-border-width: 0px;
 @btn-shadow: none;
 @btn-primary-shadow: none;
 @btn-text-shadow: none;
-
-// @btn-line-height: 100%;
-
-.ant-menu-inline{
-    border-right: none !important;
-}
-
-//////// FIXUPS
+// fixup tabs styles
+@tabs-title-font-size-sm: @font-size-sm;
+@tabs-horizontal-padding: @padding-sm @padding-sm;
+@tabs-horizontal-padding-lg: @padding-md @padding-md;
+@tabs-horizontal-padding-sm: @padding-xs @padding-xs;
+@tabs-horizontal-gutter: 0px;
+@tabs-horizontal-padding-sm: 6px @padding-sm;
 // fixup tag border-radius
 @tag-border-radius: @border-radius-sm;
 // fixup not supporting css variable

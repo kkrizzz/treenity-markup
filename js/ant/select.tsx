@@ -7,19 +7,14 @@ import '../../less/select.less';
 const { Option } = Select;
 
 export default function SelectInput() {
-  const handleChange_select = (value) => {
-    console.log(`selected ${value}`);
-  };
-
   return (
     // <SelectContainerStyled>
     <Select
-      defaultValue="lucy"
+      defaultValue="jack"
       size="small"
       style={{
         width: '100%',
       }}
-      onChange={handleChange_select}
     >
       <Option value="jack">Jack</Option>
       <Option value="lucy">Lucy</Option>
