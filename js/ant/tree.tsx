@@ -224,6 +224,11 @@ const treeData = [
   },
 ];
 
+const SecondaryButtonPrimary = styled(Button)`
+  background-color: #e0ede8;
+  color: var(--ant-primary-color);
+`;
+
 export default function TreeAnt() {
   const [showLine, setShowLine] = useState(true);
   const [showIcon, setShowIcon] = useState(false);
@@ -238,9 +243,13 @@ export default function TreeAnt() {
         treeData={treeData}
         switcherIcon={<MainFolderCloseSvg />}
       />
-      <Button type="primary" size="small" style={{ marginTop: '6px' }}>
+      <SecondaryButtonPrimary
+        type="primary"
+        size="small"
+        style={{ marginTop: '6px' }}
+      >
         Add folder
-      </Button>
+      </SecondaryButtonPrimary>
     </>
   );
 }
