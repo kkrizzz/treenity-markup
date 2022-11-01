@@ -1,0 +1,28 @@
+@import './colors';
+
+$max-width-screen: 1630px;
+
+$padding-button: 16px;
+$border-button:  1px solid text-color(0.6);
+
+$font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+
+$font-size-title: 36px;
+$font-size-subtitle: 12px;
+
+$line-height-title: 28px;
+$line-height-title: 12px;
+$line-height-button: 16px;
+
+$border-radius-large: 16px;
+$border-radius-button: 12px;
+$border-radius-button-mobile: 10px;
+$border-radius-checkbox: 4px;
+$border-radius-tags: 6px;
+
+$indent-button: 16px;
+$indent-checkbox-label: 0 0 0 7px;
+$indent-between-containers: 24px;

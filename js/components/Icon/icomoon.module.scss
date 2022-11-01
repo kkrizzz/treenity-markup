@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Treenity';
+  src: url('fonts/Treenity.ttf?iQsE') format('truetype'),
+  url('fonts/Treenity.woff?iQsE') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+.root {
+  font-family: 'Treenity' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 15px;
+  opacity: 1 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  $icons: (
+          trash-outline: "\e900",
+          trash: "\e901",
+          add-bulleted-list: "\e902",
+          add-circle-outline: "\e903",
+          add-file: "\e904",
+          add-folder: "\e905",
+          add-headlines: "\e906",
+          add-meta: "\e907",
+          add-numbered-list: "\e908",
+          add-quote: "\e909",
+          add-square-outline: "\e90a",
+          add-square: "\e90b",
+          add-table: "\e90c",
+          add-to-do-list: "\e90d",
+          add-toggle-list: "\e90e",
+          add-txt: "\e90f",
+          arrow-bottom: "\e910",
+          arrow-drop-close: "\e911",
+          arrow-drop-open: "\e912",
+          arrow-left: "\e913",
+          arrow-right: "\e914",
+          arrow-top: "\e915",
+          chart-direction: "\e916",
+          close: "\e917",
+          copy: "\e918",
+          drag: "\e919",
+          drop: "\e91a",
+          edit-code: "\e91b",
+          favourite-outline: "\e91c",
+          favourite: "\e91d",
+          file-outline: "\e91e",
+          file: "\e91f",
+          filter: "\e920",
+          folder: "\e921",
+          home: "\e922",
+          info: "\e923",
+          kebab: "\e924",
+          like-outline: "\e925",
+          like: "\e926",
+          link: "\e927",
+          locked: "\e928",
+          market-outline: "\e929",
+          market: "\e92a",
+          notification: "\e92b",
+          open-close: "\e92c",
+          preview: "\e92d",
+          queries: "\e92e",
+          rename: "\e92f",
+          search: "\e930",
+          select-outline: "\e931",
+          select: "\e932",
+          settings: "\e933",
+          source: "\e934",
+          tag: "\e935",
+          template: "\e936",
+          type: "\e937",
+          unlocked: "\e938",
+          upload-outline: "\e939",
+          upload: "\e93a",
+          success : "\e93b",
+          error: "\e93c"
+  );
+
+  @each $name, $content in $icons {
+    &.#{$name} {
+      &:before {
+        content: $content;
+      }
+    }
+  }
+}
+
+

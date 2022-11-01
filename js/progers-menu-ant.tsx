@@ -11,7 +11,6 @@ import {
   Typography,
   Tabs,
   Form,
-  Menu,
 } from 'antd';
 import Select from 'react-select';
 

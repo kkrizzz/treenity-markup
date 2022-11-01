@@ -1,0 +1,57 @@
+.root {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+
+  &.tooltip {
+    background: #F4F4F6 !important;
+
+    i {
+      color: #A7A2BD !important;
+    }
+  }
+
+  &.valid {
+    &-error {
+      background: rgba(235, 87, 87, 0.2);
+
+      i {
+        color: #EB5757 !important;
+      }
+    }
+
+    &-success {
+      background: rgba(39, 174, 96, .2) !important;
+
+      i {
+        color: #17B158 !important;
+      }
+    }
+  }
+
+  &.danger:not(.disabled) {
+    background: rgba(235, 87, 87, 0.2);
+
+    &:hover {
+      background: rgba(235, 87, 87, 1);
+
+      i {
+        color: #FFFFFF
+      }
+    }
+
+    i {
+      transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      color: #EB5757;
+    }
+  }
+
+  i {
+    font-size: 16px;
+  }
+}

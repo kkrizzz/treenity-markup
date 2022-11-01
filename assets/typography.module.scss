@@ -1,0 +1,57 @@
+@import "assets/utils/colors";
+
+.title-main {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 28px;
+  color: $text-color;
+}
+
+.title-big {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 22px;
+  color: $text-color;
+}
+
+.title-medium {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  color: $text-color;
+}
+
+.title-small {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  color: $text-color;
+}
+
+.headline {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: $text-color;
+}
+
+.subhead {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: $text-color;
+}
+
+.paragraph-text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: $text-color;
+}
+
+.text-info {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: $text-info-color;
+}

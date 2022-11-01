@@ -16,6 +16,7 @@
     "@parcel/transformer-less": "^2.7.0",
     "@parcel/transformer-react-refresh-wrap": "^2.4.1",
     "antd": "^4.23.2",
+    "classname": "^0.0.0",
     "node-dir": "^0.1.17",
     "parcel": "^2.7.0",
     "patch-package": "^6.4.7",

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import ProgersMenu from './progers-menu';
 import ProgersMenuAnt from './progers-menu-ant';
-import MainMenuLeft from './ant/mainMenu';
+// import MainMenuLeft from './ant/mainMenu';
 
 import {
   LogoTreenity,
@@ -70,14 +70,14 @@ function ExplorerContainer() {
   );
 }
 
-function MenuContainer() {
-  return (
-    <MenuContainerStyled>
-      <b>Menu</b>
-      <MainMenuLeft />
-    </MenuContainerStyled>
-  );
-}
+// function MenuContainer() {
+//   return (
+//     <MenuContainerStyled>
+//       <b>Menu</b>
+//       <MainMenuLeft />
+//     </MenuContainerStyled>
+//   );
+// }
 
 const HeaderSearchStyled = styled.div`
   width: 270px;
@@ -119,7 +119,7 @@ export default function SamplePage() {
 
               <ExplorerContainer />
 
-              <MenuContainer />
+              {/*<MenuContainer />*/}
             </SiderContainer>
           </Sider>
           <Layout className="site-layout">
