@@ -82,7 +82,8 @@
           upload-outline: "\e939",
           upload: "\e93a",
           success : "\e93b",
-          error: "\e93c"
+          error: "\e93c",
+          select-arrow: "\e93d"
   );
 
   @each $name, $content in $icons {

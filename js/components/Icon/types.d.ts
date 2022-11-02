@@ -59,7 +59,8 @@ export type IconNamesMap =
   'upload-outline' |
   'upload' |
   'success' |
-  'error'
+  'error' |
+  'select-arrow'
 
 interface IIcon {
   name: IconNamesMap;

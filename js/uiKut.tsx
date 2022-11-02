@@ -6,9 +6,14 @@ import typography from '../assets/typography.module.scss';
 import Icon from './components/Icon';
 import Input from './components/Input';
 import { Button, Form } from 'antd';
+import Select from './components/Select';
 
 const LayoutStyled = styled.div`
   padding: 40px
+`;
+
+const EmptyStyled = styled.div`
+  height: 32px
 `;
 
 const TitleStyled = styled.p`
@@ -155,7 +160,7 @@ const UiKit: FunctionComponent = () => {
                 <LabelStyled>
                   Success message
                 </LabelStyled>
-                <Form>
+                <Form style={{ position: 'relative' }}>
                   <Form.Item
                     name="number"
                     rules={[
@@ -164,7 +169,9 @@ const UiKit: FunctionComponent = () => {
                     ]}>
                     <Input placeholder="Text" isButton label="Text" />
                   </Form.Item>
-                  <Form.Item key="submitItem">
+                  <Form.Item
+                    key="submitItem"
+                    style={{ position: 'absolute', left: 0, top: 0, transform: 'translateX(-100%)' }}>
                     <Button
                       type="primary"
                       htmlType="submit"
@@ -179,7 +186,7 @@ const UiKit: FunctionComponent = () => {
                 <LabelStyled>
                   Error message
                 </LabelStyled>
-                <Form initialValues={{ number: 49 }}>
+                <Form initialValues={{ number: 49 }}  style={{ position: 'relative' }}>
                   <Form.Item
                     name="number"
                     rules={[
@@ -188,7 +195,9 @@ const UiKit: FunctionComponent = () => {
                     ]}>
                     <Input placeholder="Text" isButton label="Text" />
                   </Form.Item>
-                  <Form.Item key="submitItem">
+                  <Form.Item
+                    key="submitItem"
+                    style={{ position: 'absolute', left: 0, top: 0, transform: 'translateX(-100%)' }}>
                     <Button
                       type="primary"
                       htmlType="submit"
@@ -210,6 +219,118 @@ const UiKit: FunctionComponent = () => {
               <SubTitleStyled>
                 Dropdown
               </SubTitleStyled>
+              <div className="wrapper">
+                <LabelStyled>
+                  Tooltip
+                </LabelStyled>
+                <Select
+                  label="Select"
+                  placeholder="Placeholder"
+                  options={[
+                    {
+                      value: '1',
+                      label: 'Something text 1',
+                    },
+                    {
+                      value: '2',
+                      disabled: true,
+                      label: 'Something text 2 disabled',
+                    },
+                    {
+                      value: '3',
+                      label: 'Something text 3',
+                    },
+                  ]}
+                />
+              </div>
+              <div className="wrapper">
+                <LabelStyled>
+                  Autosuggest
+                </LabelStyled>
+                <Select
+                  label="Select"
+                  open={true}
+                  placeholder="Placeholder"
+                  options={[
+                    {
+                      value: '1',
+                      label: 'Something text 1',
+                    },
+                    {
+                      value: '2',
+                      disabled: true,
+                      label: 'Something text 2 disabled',
+                    },
+                    {
+                      value: '3',
+                      label: 'Something text 3',
+                    },
+                  ]}
+                />
+              </div>
+              <div className="wrapper">
+                <LabelStyled>
+                  &nbsp;
+                </LabelStyled>
+                <EmptyStyled />
+              </div>
+              <div className="wrapper">
+                <LabelStyled>
+                  Select
+                </LabelStyled>
+                <Select
+                  label="Select"
+                  defaultValue="1"
+                  open={true}
+                  placeholder="Placeholder"
+                  options={[
+                    {
+                      value: '1',
+                      label: 'Something text 1',
+                    },
+                    {
+                      value: '2',
+                      disabled: true,
+                      label: 'Something text 2 disabled',
+                    },
+                    {
+                      value: '3',
+                      label: 'Something text 3',
+                    },
+                  ]}
+                />
+              </div>
+              <div className="wrapper">
+                <LabelStyled>
+                  &nbsp;
+                </LabelStyled>
+                <EmptyStyled />
+              </div>
+              <div className="wrapper">
+                <LabelStyled>
+                  Multiselect
+                </LabelStyled>
+                <Select
+                  label="Select"
+                  mode="tags"
+                  placeholder="Placeholder"
+                  options={[
+                    {
+                      value: '1',
+                      label: 'Something text 1',
+                    },
+                    {
+                      value: '2',
+                      disabled: true,
+                      label: 'Something text 2 disabled',
+                    },
+                    {
+                      value: '3',
+                      label: 'Something text 3',
+                    },
+                  ]}
+                />
+              </div>
             </div>
           </InputsWrapperStyled>
         </WrapperStyled>

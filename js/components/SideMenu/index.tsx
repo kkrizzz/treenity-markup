@@ -22,19 +22,28 @@ const LogoContainer = styled.div`
 const menu = [{
   key: '1',
   icon: <Icon name="home" />,
-  label: 'Home',
+  label: 'Iconography',
+  link: '#iconography'
 }, {
   key: '2',
   icon: <Icon name="template" />,
-  label: 'Template',
+  label: 'Text styles',
+  link: '#text-styles'
 }, {
   key: '3',
   icon: <Icon name="upload" />,
-  label: 'Upload',
+  label: 'Inputs',
+  link: '#inputs'
 }, {
   key: '4',
   icon: <Icon name="trash" />,
-  label: 'Trash',
+  label: 'Buttons',
+  link: '#buttons'
+}, {
+  key: '5',
+  icon: <Icon name="trash" />,
+  label: 'Selectors & Elements',
+  link: '#selectors-elements'
 }];
 
 const SideMenu: FunctionComponent = () => {
